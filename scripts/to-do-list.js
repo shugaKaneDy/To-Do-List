@@ -50,6 +50,7 @@ function renderTodoList() {
   localStorage.setItem('myTodoList', JSON.stringify(todoList));
 }
 
+renderTodoList();
 if (!(JSON.parse(localStorage.getItem('myTodoList')))) {
   renderTodoList();
 }
