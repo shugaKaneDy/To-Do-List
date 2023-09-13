@@ -1,0 +1,339 @@
+@keyframes slideIn 
+{
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight 
+{
+  0%
+  {
+    transform: translateX(100%);
+  }
+  100%
+  {
+    transform: translateX(0);
+  }
+}
+
+@keyframes textScale {
+  0% {
+      font-size: 60px; /* Start with the initial font size */
+  }
+  100% {
+      font-size: 36px; /* End with the smaller font size */
+  }
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+.container
+{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.title
+{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Sigmar One', cursive;
+  margin-bottom: 10px;
+}
+
+.pick
+{
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  justify-content: center;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  margin-bottom: 40px;
+}
+.pick-text
+{
+  font-size: 24px;
+  letter-spacing: .2rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.pick div
+{
+  text-align: center;
+}
+.pick-button
+{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  padding-top: 3px;
+  border: 1px solid rgb(31, 31, 31);
+  box-shadow: 0 0 10px rgb(90, 90, 90);
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: transform 0.15s;
+  transform: translate(0);
+}
+.pick-button:hover
+{
+  transition: transform 0.15s;
+  transform: translate(0, -8px);
+}
+.pick-button img
+{
+  height: 50px;
+  width: 50px;
+  transform: scaleX(-1);
+}
+.pick-button img:hover
+{
+  filter: drop-shadow(0 0 10px yellow);
+}
+
+.match
+{
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-height: 220px;
+}
+.result
+{
+  font-size: 36px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  animation: textScale 1s ease-in-out forwards;
+}
+.game-match
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 220px;
+}
+.ready
+{
+  margin: 0 auto;
+  font-family: 'Sigmar One', cursive;
+  font-size: 24px;
+}
+.you,
+.computer
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+.game-match-text
+{
+  font-family: 'Sigmar One', cursive;
+}
+.match-img
+{
+  height: 150px;
+  width: 150px;
+}
+.you-img
+{
+  transform: scaleX(-1);
+}
+.js-win-image
+{
+  filter: drop-shadow(0 0 15px green);
+}
+.js-lose-image
+{
+  filter: drop-shadow(0 0 10px red);
+}
+.js-tie-image
+{
+  filter: drop-shadow(0 0 5px rgb(90, 90, 90));
+}
+.js-match-win-result
+{
+  color: green;
+}
+.js-match-lose-result
+{
+  color: red;
+}
+.js-match-tie-result
+{
+  color: rgb(90, 90, 90);
+}
+.with-animation
+{
+  animation: slideIn .5s forwards;
+}
+.computer-img
+{
+  animation: slideInRight .5s forwards;
+}
+.normal-text
+{
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+
+.score
+{
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.wins,
+.losses,
+.ties
+{
+  text-align: center;
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+.wins-title,
+.losses-title,
+.ties-title
+{
+  font-size: 20px;
+  font-weight: bold;
+}
+.wins
+{
+  color: green;
+}
+.losses
+{
+  color: red;
+}
+
+.last-button
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.last-button button
+{
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  border: 1px solid rgb(31, 31, 31);
+  cursor: pointer;
+}
+.auto-play-button:hover
+{
+  box-shadow:  0px 0px 8px blue;
+}
+.auto-play-button-active
+{
+  box-shadow:  0px 0px 8px blue;
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+.reset-button:hover
+{
+  transition: background-color 0.15s, color 0.15s;
+  background-color: black;
+  color: white;
+}
+.reset-button:active
+{
+  color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 500px) {
+  .title
+  {
+    font-size: 34px;
+  }
+  .pick-text
+  {
+    font-size: 18px;
+  }
+  .pick-button
+  {
+    height: 60px;
+    width: 60px;
+  }
+  .pick-button img
+  {
+    width: 30px;
+    height: 30px;
+  }
+  .pick-button-text,
+  .game-match-text,
+  .normal-text
+  {
+    font-size: 14px;
+  }
+  .match,.game-match
+  {
+    height: 180px;
+  }
+  .match
+  {
+    max-width: 350px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+  .match-img
+  {
+    height: 100px;
+    width: 100px;
+  }
+  .result
+  {
+    font-size: 10px;
+  }
+
+  .wins-title,
+  .losses-title,
+  .ties-title
+  {
+    font-size: 18px;
+  }
+
+  .js-wins-score,
+  .js-losses-score
+  .js-ties-score
+  {
+    font-size: 16px;
+  }
+
+  .last-button button
+  {
+    width: 120px;
+    font-size: 16px;
+  }
+
+  @keyframes textScale {
+    0% {
+        font-size: 32px; /* Start with the initial font size */
+    }
+    100% {
+        font-size: 18px; /* End with the smaller font size */
+    }
+  }
+
+  
+}

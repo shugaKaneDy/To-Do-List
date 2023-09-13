@@ -1,0 +1,130 @@
+.header
+{
+  height: 70px;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0 auto;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(59,20,143,1) 50%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+  z-index: 1000;
+}
+.logo
+{
+  font-size: 30px;
+  font-family: 'Roboto', Arial;
+  font-weight: bold;
+  color: #dcf3aa;
+  filter: drop-shadow(0 0 .75rem #4c1ab7);
+  cursor: pointer;
+  margin-left: 50px;
+}
+.ig
+{
+  color: #3b148f;
+}
+.middle
+{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-left: 68px;
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 2px 20px;
+}
+.white
+{
+  color: white !important;
+  font-size: 40px;
+}
+.middle-text
+{
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+}
+.right
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  border-bottom: 1px solid #3b148f;
+  margin-right: 50px;
+}
+.material-symbols-outlined
+{
+  color: #3b148f;
+}
+.right-text
+{
+  color: #3b148f;
+  font-family: 'Roboto', Arial;
+  cursor: pointer;
+}
+.right:hover
+{
+  filter: drop-shadow(0 0 .75rem #dcf3aa);
+}
+
+@media (max-width: 500px) {
+  .header
+  {
+    padding: 0 10px;
+    height: 50px;
+  }
+
+  .logo
+  {
+    font-size: 26px;
+    margin-left: 10px;
+  }
+  .rest-logo
+  {
+    display: none;
+  }
+  .ig
+  {
+    color: #dcf3aa;
+  }
+
+  .more-icon
+  {
+    font-size: 35px;
+  }
+
+  .middle
+  {
+    margin-left: 0;
+    padding: 2px 5px;
+  }
+  .middle-text
+  {
+    font-size: 18px;
+  }
+  .white
+  {
+    font-size: 30px;
+  }
+
+  .right
+  {
+    border: none;
+    margin-right: 10px;
+  }
+  .right-text
+  {
+    display: none;
+  }
+}

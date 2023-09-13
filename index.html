@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sigmar+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <link rel="stylesheet" href="styles/to-do-list.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+</head>
+<body>
+  <div class="header">
+    <p class="logo"><span class="ig">IG</span><span class="rest-logo">ames</span></p>
+    <div class="middle">
+      <span class="material-symbols-outlined white">
+        account_circle
+      </span>
+      <p class="middle-text">
+        Hello, User1
+      </p>
+    </div>
+    <div class="right">
+      <p class="right-text">More Games and Apps</p>
+      <span class="material-symbols-outlined more-icon">
+        more_horiz
+      </span>
+    </div>
+  </div>
+
+  <button class="add-task-button js-add-task-button">
+    <div class="add-task">
+      <span class="material-symbols-outlined add-task-icon">
+        add
+      </span>
+      <p class="add-task-text">Add To Do</p>
+    </div>
+  </button>
+
+  <div class="add-task-content js-add-task-content">
+    <div class="add-task-content-container">
+      <p class="add-task-content-text">Add To Do</p>
+      <div class="inputs">
+        <div class="inputs-div">
+          <label for="">Task</label>
+          <input type="text" placeholder="Enter task" class="js-name-input">
+        </div>
+        <div class="inputs-div">
+          <label for="">Date</label>
+          <input type="date" class="date-input js-date-input">
+        </div>
+        <div class="inputs-div">
+          <label for="">Icon</label>
+          <select id="myDropdown">
+            <div class="try">
+              <option value="Default">Default</option>
+              <option value="Tv">Tv</option>
+              <option value="Broom">Broom</option>
+              <option value="Laundry">Laundry</option>
+              <option value="Write">Write</option>
+              <option value="Workout">Workout</option>
+              <option value="Eat">Eat</option>
+              <option value="Games">Games</option>
+              <option value="Washing-dishes">Washing-dishes</option>
+            </div>
+          </select>
+        </div>
+      </div>
+      <div class="add-task-content-buttons">
+        <button class="js-add-button">Add</button>
+        <button class="cancel-button js-cancel-button">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <div class="content-title">
+        <div class="to-do-icon-container">
+          <img src="icons/to-do-icon.png" class="to-do-img">
+        </div>
+        <div class="to-do-title-container">
+          <p class="to-do-title">To Do List</p>
+        </div>
+        <div class="one-circle circle"></div>
+        <div class="two-circle circle"></div>
+        <div class="three-circle circle"></div>
+      </div>
+      
+      <div class="to-do-list js-to-do-list">
+        <p class="no-content-text">Task List</p>
+        <!-- <div class="task-container">
+          <div class="task-date">
+            <p class="task-date-text">08-18-2001</p>
+          </div>
+          <div class="task-img-container">
+            <img src="icons/Write-icon.png" class="task-img">
+          </div>
+          <div class="task-description-delete">
+            <p class="task-text">Journaling</p>
+          </div>
+          <button class="task-button-delete">
+            <span class="material-symbols-outlined delete-icon">
+              delete
+            </span>
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  
+  <script src="scripts/to-do-list.js"></script>
+</body>
+</html>

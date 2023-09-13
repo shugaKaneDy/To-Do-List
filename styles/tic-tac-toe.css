@@ -1,0 +1,190 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.game-container button
+{
+  height: 100px;
+  width: 100px;
+  font-size: 60px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.title
+{
+  text-align: center;
+  font-family: 'Sigmar One', cursive;
+  font-size: 32px;
+}
+
+.you-computer
+{
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  margin: 30px auto 0 auto;
+  font-family: 'Barlow', sans-serif;
+  font-size: 24px;
+}
+.you
+{
+  color: blue;
+}
+.computer
+{
+  color: yellow;
+}
+
+.game-container
+{
+  display: flex;
+  height: 360px;
+  width: 400px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.game-container div
+{
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 10px;
+}
+.winner
+{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.winner-container {
+  padding: 10px 40px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 12px );
+  -webkit-backdrop-filter: blur( 12px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.score-data
+{
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-bottom: 20px;
+}
+.score-data div
+{
+  display: flex;
+  gap: 10px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.reset-container
+{
+  width: 500px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+}
+.reset-container button
+{
+  height: 40px;
+  width: 130px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px black solid;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.reset-container button:hover
+{
+  background-color: black;
+  color: white;
+  transition: color 0.15s, background-color 0.15s;
+}
+.reset-container button:active
+{
+  opacity: 0.8;
+}
+
+
+.wins
+{
+  color: green;
+}
+.losses
+{
+  color: red;
+}
+
+.blue
+{
+  color: Blue;
+}
+.yellow
+{
+  color: yellow;
+}
+.win
+{
+  color: green;
+}
+.lose
+{
+  color: red;
+}
+.tie
+{
+  color: gray;
+}
+
+@media (max-width: 500px) {
+  .you-computer {
+    width: 200px;
+    font-size: 20px;
+  }
+  .reset-container
+  {
+    width: 300px;
+  }
+  .game-container button
+  {
+    height: 90px;
+    width: 90px;
+    font-size: 50px;
+  }
+  .game-container
+  {
+    width: 200px;
+    height: 340px;
+  }
+  .score-data
+  {
+    font-size: 18px;
+  }
+}

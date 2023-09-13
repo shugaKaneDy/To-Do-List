@@ -1,0 +1,471 @@
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+.add-task-button
+{
+  cursor: pointer;
+}
+.add-task:hover
+{
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+.add-task
+{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+  border-radius: 50px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: #232306;
+  z-index: 49;
+}
+.add-task-icon
+{
+  font-size: 30px;
+  color: #2323d7;
+}
+.add-task-text
+{
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add-task-content
+{
+  height: 100vh;
+  width: 100vw;
+  /* background-color: rgba(0, 0, 0,0.15); */
+  background-color: rgba(35, 35, 215, 0.30);
+  position: fixed;
+  z-index: 50;
+  top: 70px;
+  display: none;
+
+}
+.add-task-content-cancel
+{
+  display: flex;
+}
+.add-task-content-container
+{
+  margin: 5vh auto;
+  height: 450px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background: rgba( 255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 15px );
+  -webkit-backdrop-filter: blur( 15px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.add-task-content-container input,
+.add-task-content-container select
+{
+  height: 40px;
+  width: 500px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  padding-left: 30px;
+  font-size: 18px;
+}
+
+
+.add-task-content-container input:focus,
+.add-task-content-container select:focus
+{
+  outline: 2px solid #2323d7;
+}
+.add-task-content-container p
+{
+  font-size: 24px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #232306;
+}
+.add-task-content-container button
+{
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2323d7;
+  color: white;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-size: 18px;
+}
+.cancel-button
+{
+  background-color: rgb(177, 12, 12) !important;
+}
+.add-task-content-buttons
+{
+  display: flex;
+  gap: 50px;
+}
+.add-task-content-buttons button:hover
+{
+  opacity: 0.8;
+}
+
+.content
+{
+  max-width: 950px;
+  min-height: 200px;
+  border-radius: 50px;
+  position: relative;
+  padding: 120px 70px 30px 120px;
+  margin: 70px auto;
+  background-image: linear-gradient(to top, #2323d7, #6f5ce5, #a291f1, #d0c8fa, #ffffff);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-top: none;
+}
+
+.no-content-text
+{
+  font-size: 32px;
+  color: white;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.to-do-icon-container
+{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: #f7f7cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 50%;
+  top: -50px;
+  left: 80px;
+}
+.to-do-img
+{
+  width: 60px;
+}
+.to-do-title-container
+{
+  height: 60px;
+  width: 250px;
+  background-color: #f7f7cf;
+  border: 2px solid black;
+  border-radius: 20px;
+  position: absolute;
+  top: -30px;
+  left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.to-do-title
+{
+  font-size: 32px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.circle
+{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: #f7f7cf;
+  top: -15px;
+  left: 770px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 50%;
+  z-index: 100;
+}
+.two-circle
+{
+  left: 810px;
+}
+.three-circle
+{
+  left: 850px;
+}
+
+.task-container
+{
+  position: relative;
+  display: flex;
+  margin-bottom: 35px;
+  border-radius: 10px;
+}
+.task-img-container
+{
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #f7f7cf;
+  top: -25px;
+  left: -30px;
+}
+.task-img
+{
+  width: 50px;
+}
+.task-date
+{
+  position: absolute;
+  background-color:#f7f7cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 50px;
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  top: -20px;
+  left: 430px;
+  padding: 5px 20px 5px 20px;
+}
+.task-description-delete
+{
+  flex: 1;
+  padding: 25px 80px 25px 80px;
+  background-color: #f7f7cf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+.task-button-delete
+{
+  background-color: rgb(221, 0, 0);
+  height: 50px;
+  width: 90px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: 1px solid white;
+}
+.task-button-delete:hover
+{
+  opacity: 0.8;
+}
+.task-button-delete:active
+{
+  opacity: 0.3;
+}
+.delete-icon
+{
+  font-size: 30px;
+  color: white !important;
+}
+.inputs
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inputs-div
+{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+select option
+{
+  height: 50px; /* Set the height as needed */
+  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+  border: 1px solid #ccc; /* Add a border for better visibility */
+  padding: 10px; /* Add padding for spacing */
+}
+
+@media (max-width: 500px) {
+  .add-task 
+  {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: none;
+    padding: 12px 10px 12px 5px;
+    width: 120px;
+  }
+  .add-task:hover
+  {
+    animation: none;
+  }
+  .add-task-icon
+  {
+    font-size: 20px;
+  }
+  .add-task-text
+  {
+    font-size: 14px;
+  }
+  .content
+  {
+    max-width: 325px;
+    min-height: 400px;
+    padding: 90px 20px 5px 40px;
+    margin: 20px auto;
+  }
+  .to-do-icon-container
+  {
+    width: 60px;
+    height: 60px;
+    left: 15px;
+    top: -30px;
+    border: 1px solid black;
+  }
+  .to-do-img
+  {
+    width: 30px;
+  }
+  .to-do-title-container
+  {
+    width: 110px;
+    height: 35px;
+    left: 85px;
+    top: -20px;
+    border: 1px solid black;
+  }
+  .to-do-title
+  {
+    font-size: 16px;
+  }
+  .circle
+  {
+    height: 18px;
+    width: 18px;
+    left: 235px;
+    top: -8px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .two-circle
+  {
+    left: 260px;
+  }
+  .three-circle
+  {
+    left: 285px;
+  }
+  .no-content-text
+  {
+    font-size: 18px;
+  }
+
+  .task-container
+  {
+    margin-bottom: 25px;
+  }
+  .task-img-container
+  {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    top: -15px;
+    left: -20px;
+    border-radius: 5px;
+  }
+  .task-img
+  {
+    width: 25px;
+  }
+  .task-description-delete
+  {
+    font-size: 14px;
+    padding: 15px 10px 15px 30px;
+    margin-right: 8px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+  .task-button-delete
+  {
+    height: 30px;
+    width: 35px;
+    border-radius: 5px;
+  }
+  .delete-icon
+  {
+    font-size: 15px;
+  }
+  .task-date
+  {
+    left: 130px;
+    padding: 2px 10px 2px 10px;
+    font-size: 10px;
+    top: -10px;
+  }
+  .add-task-content
+  {
+    top: 40px
+  }
+  .add-task-content-container
+  {
+    margin: 15vh auto;
+    height: 350px;
+    width: 300px;
+    gap: 30px;
+  }
+  .add-task-content-container p
+  {
+    font-size: 18px;
+  }
+  .add-task-content-container input,
+  .add-task-content-container select
+  {
+    height: 30px;
+    width: 220px;
+    font-size: 14px;
+  }
+  .add-task-content-container label
+  {
+    font-size: 14px;
+  }
+  .add-task-content-container button
+  {
+    width: 100px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .add-task-content-buttons
+  {
+    gap: 15px;
+  }
+}
