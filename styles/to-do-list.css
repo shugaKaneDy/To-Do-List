@@ -415,13 +415,13 @@ select option
     margin-right: 5px;
     font-size: 12px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgb(156, 156, 156);
   }
   .task-button-delete
   {
     height: 25px;
     width: 35px;
     border-radius: 5px;
+    box-shadow: 0 0 5px rgb(156, 156, 156);
   }
   .delete-icon
   {
