@@ -29,13 +29,12 @@ function renderTodoList() {
       </div>
       <button class="task-button-delete js-delete-todo-button">
         <span class="material-symbols-outlined delete-icon">
-          delete
+          remove
         </span>
       </button>
     </div>`;
     todoListHTML += html;
   });
-  console.log(todoListHTML)
   document.querySelector('.js-to-do-list')
     .innerHTML = todoListHTML;
   document.querySelectorAll('.js-delete-todo-button')
@@ -49,7 +48,6 @@ function renderTodoList() {
 
   localStorage.setItem('myTodoList', JSON.stringify(todoList));
 }
-
 renderTodoList();
 if (!(JSON.parse(localStorage.getItem('myTodoList')))) {
   renderTodoList();
@@ -83,8 +81,6 @@ document.querySelector('.js-cancel-button')
 
     addTaskContainer.classList.remove('add-task-content-cancel');
 
-    console.log(addTaskContainer);
-
   });
 
 document.querySelector('.js-add-button')
@@ -95,8 +91,6 @@ document.querySelector('.js-add-button')
     addTaskContainer.classList.remove('add-task-content-cancel');
 
     addTodo();
-    console.log(addTaskContainer);
-    console.log(dropDown.value);
     alert('To Do List Added');
   });
 
