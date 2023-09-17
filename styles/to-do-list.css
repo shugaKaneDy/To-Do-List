@@ -140,10 +140,10 @@
   position: relative;
   padding: 120px 70px 30px 120px;
   margin: 70px auto;
-  background-image: linear-gradient(to top, #2323d7, #6f5ce5, #a291f1, #d0c8fa, #ffffff);
+  background-image: linear-gradient(to top, rgba(35, 35, 215, 0.7), rgba(111, 92, 229, 0.7), rgba(162, 145, 241, 0.7), rgb(208, 200, 250, 0.7), rgba(255, 255, 255, 0.7));
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 20px );
-  -webkit-backdrop-filter: blur( 20px );
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   border-top: none;
@@ -170,6 +170,10 @@
   border-radius: 50%;
   top: -50px;
   left: 80px;
+  background: rgba( 247, 247, 207, 0.8 );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur( 20px);
+  z-index: 1;
 }
 .to-do-img
 {
@@ -188,6 +192,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba( 247, 247, 207, 0.8 );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur( 20px);
+  z-index: 1;
 }
 .to-do-title
 {
@@ -208,6 +216,10 @@
   border-bottom: 2px solid black;
   border-radius: 50%;
   z-index: 100;
+  background: rgba( 247, 247, 207, 0.8 );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur( 20px);
+  z-index: 1;
 }
 .two-circle
 {
@@ -238,6 +250,10 @@
   background-color: #f7f7cf;
   top: -25px;
   left: -30px;
+  background: rgba( 247, 247, 207, 0.5 );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur( 20px);
+  z-index: 1;
 }
 .task-img
 {
@@ -257,12 +273,16 @@
   top: -20px;
   left: 430px;
   padding: 5px 20px 5px 20px;
+  background: rgba( 247, 247, 207, 0.5 );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur( 20px);
+  z-index: 1;
 }
 .task-description-delete
 {
   flex: 1;
   padding: 25px 80px 25px 80px;
-  background-color: #f7f7cf;
+  background-color: rgb(247, 247, 207);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -270,6 +290,9 @@
   font-size: 18px;
   margin-right: 10px;
   border-radius: 10px;
+  background: rgba( 247, 247, 207, 0.85 );
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur( 17px);
 }
 .task-button-delete
 {
@@ -279,7 +302,9 @@
   border: none;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgb(156, 156, 156);
+  background: rgba(248, 57, 57, 1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur( 20px);
 }
 .task-button-delete:hover
 {
@@ -293,7 +318,6 @@
 {
   font-size: 40px;
   color: white !important;
-  font-weight: bold;
 }
 .inputs
 {
@@ -421,7 +445,6 @@ select option
     height: 25px;
     width: 35px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgb(156, 156, 156);
   }
   .delete-icon
   {
