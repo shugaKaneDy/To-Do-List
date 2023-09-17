@@ -290,9 +290,9 @@
   font-size: 18px;
   margin-right: 10px;
   border-radius: 10px;
-  background: rgba( 247, 247, 207, 0.85 );
-  backdrop-filter: blur(17px);
-  -webkit-backdrop-filter: blur( 17px);
+  background: rgba( 247, 247, 207, 0.95 );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur( 20px);
 }
 .task-button-delete
 {
